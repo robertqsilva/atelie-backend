@@ -13,6 +13,7 @@ exports.getProductById = async (req, res) => {
 };
 
 exports.createProduct = async (req, res) => {
+  
   const newProduct = await Product.query().insert(req.body);
   res.status(201).json(newProduct);
 };

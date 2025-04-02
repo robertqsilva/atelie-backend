@@ -8,4 +8,8 @@ router.post("/products", productController.createProduct);
 router.put("/products/:id", productController.updateProduct);
 router.delete("/products/:id", productController.deleteProduct);
 
+router.get("/categories", (req, res) => {
+    res.json(["Vestidos","Saias","Blusas","Calças", "Acessórios"]);
+});
+
 module.exports = router;
