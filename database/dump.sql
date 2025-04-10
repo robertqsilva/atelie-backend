@@ -8,8 +8,20 @@ CREATE TABLE products (
     images TEXT[],
     colors TEXT[],
     sizes TEXT[],
+    sobre TEXT,
     instock BOOLEAN DEFAULT true,
     featured BOOLEAN DEFAULT false,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE info_loja (
+  id SERIAL PRIMARY KEY,
+  nome TEXT,
+  email TEXT,
+  whatsapp TEXT,
+  horario TEXT,
+  descricao TEXT,
+  instagram TEXT,
+  facebook TEXT
 );
